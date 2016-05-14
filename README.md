@@ -13,3 +13,9 @@
   <li>2x EC11 Rotary Encoder with Push Button Switch</li>
   <li>4x 4.7kOhm 1/4W Resistor</li>
   <li>Solid State Relay capable of switching on and off Mains power (120V/240V)<li>
+</ul>
+
+<h4>Prerequisites</h4>
+<li><a href="https://github.com/xtacocorex/CHIP_IO">CHIP_IO</a></li>
+<li><a href="https://github.com/xtacocorex/Adafruit_Python_GPIO">Adafruit Python Library</a>
+<li><a href="http://www.chip-community.org/index.php/Compile_the_Linux_kernel_for_Chip:_my_personal_HOWTO">renzo's Linux kernal for CHIP</a>
