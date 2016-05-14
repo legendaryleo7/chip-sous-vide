@@ -15,20 +15,28 @@ class sousVide:
 		#self.root.geometry("%dx%d+0+0" % (w, h))
 		#self.root.focus_set()
 		self.root.bind("<Escape>", self.toggle_geom)
-		self.A_PIN1  = 5
-		self.B_PIN1  = 4
-		self.SW_PIN1 = 6	
-		self.A_PIN2	= 2
-		self.B_PIN2	= 3
-		self.SW_PIN2 = 15
+		self.A_PIN1  = 5 	# Timer Pin A
+		self.B_PIN1  = 4	# Timer Pin B
+		self.SW_PIN1 = 6	# Timer Switch
+		self.A_PIN2	= 2	# Temp  Pin A
+		self.B_PIN2	= 3	# Temp  Pin B
+		self.SW_PIN2 = 15	# Temp  Switch
 		self.minuteGraphPath = '/var/www/temp_minute.png'
 		self.minute15GraphPath = '/var/www/temp_15minute.png'
-		 
+		
+		
+		#encoder1 will be the Timer 
 		self.encoder1 = gaugette.rotary_encoder.RotaryEncoder.Worker(self.A_PIN1, self.B_PIN1)
 		self.encoder1.start()
+		
+		#switch1 will be the switch on the Timer knob
 		self.switch1 = gaugette.switch.Switch(self.SW_PIN1)
+		
+		#encoder2 will be the Temperature
 		self.encoder2 = gaugette.rotary_encoder.RotaryEncoder.Worker(self.A_PIN2, self.B_PIN2)
 		self.encoder2.start()
+		
+		#switch2 will be the switch on the Temperature knob
 		self.switch2 = gaugette.switch.Switch(self.SW_PIN2)
 		self.last_state1 = None
 		self.last_state2 = None
