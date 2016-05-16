@@ -14,14 +14,14 @@ import time
 from rotary_class import RotaryEncoder
 
 # Switch definitions
-RIGHT_BUTTON = 25
-LEFT_A = 14
-LEFT_B = 15
-RIGHT_A = 17
-RIGHT_B = 18
-LEFT_BUTTON = 4 
+LEFT_A = "U14_14" 	# Temp A
+LEFT_B = "U14_18"	# Temp B
+LEFT_BUTTON = "U14_16"  # Temp Switch
+RIGHT_A = "U14_13"	# Timer A
+RIGHT_B = "U14_17"	# Timer B
+RIGHT_BUTTON = "U14_15" # Timer Button
 
-
+ 
 # This is the event callback routine to handle left knob events
 def left_knob_event(event):
 	handle_event(event,"Left knob")	
