@@ -15,12 +15,12 @@ class sousVide:
 		#self.root.geometry("%dx%d+0+0" % (w, h))
 		#self.root.focus_set()
 		self.root.bind("<Escape>", self.toggle_geom)
-		self.A_PIN1  = 5 	# Timer Pin A
-		self.B_PIN1  = 4	# Timer Pin B
-		self.SW_PIN1 = 6	# Timer Switch
-		self.A_PIN2	= 2	# Temp  Pin A
-		self.B_PIN2	= 3	# Temp  Pin B
-		self.SW_PIN2 = 15	# Temp  Switch
+		self.A_PIN1  = "U14_13" 	# Timer Pin A
+		self.B_PIN1  = "U14_17"	# Timer Pin B
+		self.SW_PIN1 = "U14_15"	# Timer Switch
+		self.A_PIN2  = "U14_14"	# Temp  Pin A
+		self.B_PIN2  = "U14_18"	# Temp  Pin B
+		self.SW_PIN2 = "U14_16"	# Temp  Switch
 		self.minuteGraphPath = '/var/www/temp_minute.png'
 		self.minute15GraphPath = '/var/www/temp_15minute.png'
 		
